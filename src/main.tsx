@@ -1,10 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+// src/main.tsx
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import LandingPage from './pages/landing.page';
+
+
+const htmlRoot: HTMLElement = document.getElementById('root') as HTMLElement;
+
+const RootElem = ReactDOM.createRoot(htmlRoot);
+
+RootElem.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <LandingPage />
+  </React.StrictMode>
+);
