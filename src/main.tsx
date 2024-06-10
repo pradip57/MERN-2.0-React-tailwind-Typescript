@@ -12,6 +12,7 @@ const RootElem = ReactDOM.createRoot(htmlRoot);
 
 RootElem.render(
   <React.StrictMode>
-    <LandingPage />
+    <LandingPage name="Pradip" email="dellpidarp67@gmail.com"></LandingPage>
+    {/* <LandingPage  /> */}
   </React.StrictMode>
 );
