@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import LandingPage from './pages/landing.page';
+import LandingPage from './pages/landing/landing.page';
 
 
 const htmlRoot: HTMLElement = document.getElementById('root') as HTMLElement;
