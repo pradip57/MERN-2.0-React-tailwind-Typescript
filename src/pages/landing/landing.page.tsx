@@ -26,6 +26,8 @@ const LandingPage = ({ name, email }: LandingPagePropsType): ReactNode => {
         <strong>Email: </strong>
         {email}
       </p>
+
+      <p className="text-red-400 text-center">Hello</p>
     </React.Fragment>
   );
 };
