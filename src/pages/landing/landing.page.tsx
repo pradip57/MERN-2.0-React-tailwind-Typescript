@@ -1,14 +1,12 @@
 import React, { CSSProperties, ReactNode } from "react";
-
+import "./landing.page.css";
 
 interface LandingPagePropsType {
   name: string;
   email: string;
 }
 
-
-
-const paragraphStyle:CSSProperties = {
+const paragraphStyle: CSSProperties = {
   backgroundColor: "red",
   color: "white",
   textAlign: "center",
@@ -20,11 +18,11 @@ const LandingPage = ({ name, email }: LandingPagePropsType): ReactNode => {
 
   return (
     <React.Fragment>
-      <p style={paragraphStyle}>
+      <p className="landingParagraph" style={paragraphStyle}>
         <strong>Name: </strong>
         {name}
       </p>
-      <p style={paragraphStyle}>
+      <p className="landingParagraph" style={paragraphStyle}>
         <strong>Email: </strong>
         {email}
       </p>
