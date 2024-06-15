@@ -1,33 +1,25 @@
 import React, { ReactNode } from "react";
 import "./landing.page.css";
+import img1 from "../../assets/react.svg";
 
 const LandingPage1 = (): ReactNode => {
   return (
     <React.Fragment>
-      <div className="bg-white">
-        <header className="absolute inset-x-0 top-0 z-50">
-          <nav
-            className="flex items-center justify-between p-6 lg:px-8"
-            aria-label="Global"
-          >
-            <div className="flex lg:flex-1">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only text-slate-500">Your Company</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div className="flex lg:hidden">
+      <nav className="bg-gray-800">
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="relative flex h-16 items-center justify-between">
+            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <button
                 type="button"
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
               >
+                <span className="absolute -inset-0.5"></span>
                 <span className="sr-only">Open main menu</span>
+
                 <svg
-                  className="h-6 w-6"
+                  className="block h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
@@ -40,120 +32,172 @@ const LandingPage1 = (): ReactNode => {
                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                   />
                 </svg>
+
+                <svg
+                  className="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
               </button>
             </div>
-            <div className="hidden lg:flex lg:gap-x-12">
-              <a
-                href="#"
-                className="text-sm font-bold leading-6 text-gray-700 text-[17px]"
-              >
-                Product
-              </a>
-              <a
-                href="#"
-                className="text-sm font-bold leading-6 text-gray-700 text-[17px]"
-              >
-                Features
-              </a>
-              <a
-                href="#"
-                className="text-sm font-bold leading-6 text-gray-700 text-[17px]"
-              >
-                Marketplace
-              </a>
-              <a
-                href="#"
-                className="text-sm font-bold leading-6 text-gray-700 text-[17px]"
-              >
-                Company
-              </a>
-            </div>
-            <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-gray-900 text-[17px]"
-              >
-                Log in <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </nav>
-
-          <div className="lg:hidden" role="dialog" aria-modal="true">
-            <div className="fixed inset-0 z-50"></div>
-            <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-              <div className="flex items-center justify-between">
-                <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Your Company</span>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt=""
-                  />
-                </a>
-                <button
-                  type="button"
-                  className="-m-2.5 rounded-md p-2.5 text-gray-700"
-                >
-                  <span className="sr-only">Close menu</span>
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
+            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-shrink-0 items-center">
+                <img className="h-8 w-auto" src={img1} alt="Your Company" />
               </div>
-              <div className="mt-6 flow-root">
-                <div className="-my-6 divide-y divide-gray-500/10">
-                  <div className="space-y-2 py-6">
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Product
-                    </a>
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Features
-                    </a>
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Marketplace
-                    </a>
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Company
-                    </a>
-                  </div>
-                  <div className="py-6">
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Log in
-                    </a>
-                  </div>
+              <div className="hidden sm:ml-6 sm:block">
+                <div className="flex space-x-4">
+                  <a
+                    href="#"
+                    className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                    aria-current="page"
+                  >
+                    Dashboard
+                  </a>
+                  <a
+                    href="#"
+                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >
+                    Team
+                  </a>
+                  <a
+                    href="#"
+                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >
+                    Projects
+                  </a>
+                  <a
+                    href="#"
+                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >
+                    Calendar
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <button
+                type="button"
+                className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              >
+                <span className="absolute -inset-1.5"></span>
+                <span className="sr-only">View notifications</span>
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  />
+                </svg>
+              </button>
+
+              <div className="relative ml-3">
+                <div>
+                  <button
+                    type="button"
+                    className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    id="user-menu-button"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    <span className="absolute -inset-1.5"></span>
+                    <span className="sr-only">Open user menu</span>
+                    <img
+                      className="h-8 w-8 rounded-full"
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      alt=""
+                    />
+                  </button>
+                </div>
+
+                <div
+                  className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="user-menu-button"
+                  tabIndex={-1}
+                >
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabIndex={-1}
+                    id="user-menu-item-0"
+                  >
+                    Your Profile
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabIndex={-1}
+                    id="user-menu-item-1"
+                  >
+                    Settings
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabIndex={-1}
+                    id="user-menu-item-2"
+                  >
+                    Sign out
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-        </header>
+        </div>
 
-        <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="sm:hidden" id="mobile-menu">
+          <div className="space-y-1 px-2 pb-3 pt-2">
+            <a
+              href="#"
+              className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+              aria-current="page"
+            >
+              Dashboard
+            </a>
+            <a
+              href="#"
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >
+              Team
+            </a>
+            <a
+              href="#"
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >
+              Projects
+            </a>
+            <a
+              href="#"
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >
+              Calendar
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div className="bg-white ">
+        <div className="relative isolate px-6 lg:px-8">
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             aria-hidden="true"
@@ -201,17 +245,216 @@ const LandingPage1 = (): ReactNode => {
               </div>
             </div>
           </div>
-          <div
-            className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-            aria-hidden="true"
-          >
-            <div
-              className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-              style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-            ></div>
+        </div>
+      </div>
+
+      <div className="bg-lime-50 mt-[-80px]">
+        <div className="mx-auto max-w-2xl px-6 py-6 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+            Customer's Choice
+          </h2>
+
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            <div className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href="#">
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0"
+                      ></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+
+                  <p className="mt-1 text-sm text-gray-500">Black</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">$35</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href="#">
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0"
+                      ></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+
+                  <p className="mt-1 text-sm text-gray-500">Black</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">$35</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href="#">
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0"
+                      ></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+
+                  <p className="mt-1 text-sm text-gray-500">Black</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">$35</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href="#">
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0"
+                      ></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+
+                  <p className="mt-1 text-sm text-gray-500">Black</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">$35</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href="#">
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0"
+                      ></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+
+                  <p className="mt-1 text-sm text-gray-500">Black</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">$35</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href="#">
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0"
+                      ></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+
+                  <p className="mt-1 text-sm text-gray-500">Black</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">$35</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href="#">
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0"
+                      ></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+
+                  <p className="mt-1 text-sm text-gray-500">Black</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">$35</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href="#">
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0"
+                      ></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+
+                  <p className="mt-1 text-sm text-gray-500">Black</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">$35</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
