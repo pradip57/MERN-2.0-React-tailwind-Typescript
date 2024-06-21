@@ -91,7 +91,7 @@ const LandingPage1 = (): ReactNode => {
                     Dashboard
                   </a>
                   <a
-                    href="#"
+                    href="/team"
                     className="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"
                   >
                     Team
