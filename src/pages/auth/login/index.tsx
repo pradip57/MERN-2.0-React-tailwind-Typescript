@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Image } from "../../../components/common/imageheader";
+import { Image } from "../../../components/common/imagecommon";
 import { NavLink } from "react-router-dom";
 
 const Login = (): ReactNode => {

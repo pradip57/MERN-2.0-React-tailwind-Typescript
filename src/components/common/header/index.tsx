@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Image } from "../imageheader";
+import { ImageHeader } from "../imageheader";
 import image1 from "../../../assets/react.svg";
 import { NavLink } from "react-router-dom";
 
@@ -50,16 +50,16 @@ const HeaderComponent = (): ReactNode => {
                 </svg>
               </button>
             </div>
-            <div className="flex flex-1  items-center justify-center sm:items-stretch sm:justify-evenly">
-              <Image classes="" alt="" url={image1}/>
+            <div className="flex flex-1  items-center justify-center sm:items-stretch sm:justify-evenly ">
+              <ImageHeader classes="" alt="" url={image1} />
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-5">
                   <NavLink
                     to="#"
-                    className="rounded-md bg-slate-300 px-3 py-2 text-lg font-medium text-black"
+                    className="rounded-md px-3 py-2 text-lg font-medium text-black hover:bg-gray-700 hover:text-white"
                     aria-current="page"
                   >
-                    Category
+                    Categories
                   </NavLink>
                   <NavLink
                     to="/team"
@@ -105,7 +105,7 @@ const HeaderComponent = (): ReactNode => {
           <div className="space-y-4 px-2 pb-3 pt-2">
             <NavLink
               to="#"
-              className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+              className="block rounded-md px-3 py-2 text-base font-medium  text-slate-700 hover:bg-gray-700 hover:text-white"
               aria-current="page"
             >
               Category
