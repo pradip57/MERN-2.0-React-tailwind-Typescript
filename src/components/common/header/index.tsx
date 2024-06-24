@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import img1 from "../../assets/react.svg";
+import img1 from "../../../assets/react.svg"
 
 const HeaderComponent = ():ReactNode  =>{
 
