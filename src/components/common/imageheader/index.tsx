@@ -20,7 +20,6 @@ export const ImageHeader = ({
           <img className={classes} src={url} alt={alt} />
         </NavLink>
       </div>
-      ;
     </>
   );
 };
