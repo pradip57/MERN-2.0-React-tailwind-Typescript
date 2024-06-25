@@ -1,8 +1,20 @@
 import { ReactNode } from "react";
 import { Image } from "../../../components/common/imagecommon";
 import { NavLink } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const Login = (): ReactNode => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const submitForm = (data:any) => {
+   console.log(data)
+    //validation
+  };
+  console.log(errors);
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -14,7 +26,7 @@ const Login = (): ReactNode => {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form onSubmit={handleSubmit(submitForm)} className="space-y-6">
             <div>
               <label
                 htmlFor="email"
@@ -25,10 +37,9 @@ const Login = (): ReactNode => {
               <div className="mt-2">
                 <input
                   id="email"
-                  name="email"
                   type="email"
                   autoComplete="email"
-                  required
+                  {...register("email", { required: true })}
                   className="px-2 sm:text-[17px] block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -54,10 +65,9 @@ const Login = (): ReactNode => {
               <div className="mt-2">
                 <input
                   id="password"
-                  name="password"
                   type="password"
                   autoComplete="current-password"
-                  required
+                  {...register("password", { required: true })}
                   className="px-2 sm:text-[17px] block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
