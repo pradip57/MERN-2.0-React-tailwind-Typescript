@@ -87,7 +87,7 @@ const HeaderComponent = (): ReactNode => {
                     to="/auth/login"
                     className="rounded-md px-3 py-2 text-lg font-medium text-black hover:bg-gray-700 hover:text-white"
                   >
-                    Log In
+                    LogIn
                   </NavLink>
                   <NavLink
                     to="/auth/register"
@@ -135,7 +135,7 @@ const HeaderComponent = (): ReactNode => {
               className="block rounded-md px-3 py-2 text-base font-medium text-slate-700  hover:bg-gray-700 hover:text-white"
               aria-current="page"
             >
-              Log In
+              LogIn
             </NavLink>
             <NavLink
               to="/auth/register"
